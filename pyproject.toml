@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "pybotx-smartapp-smart-logger"
+version = "0.2.0"
+description = ""
+authors = ["Arseniy Zhiltsov <arseniy.zhiltsov@ccsteam.ru>"]
+
+[tool.poetry.dependencies]
+python = ">=3.8, <3.10"
+
+pybotx = "~0.32.0"
+pybotx-smart-logger = "~0.6.0"
+pybotx-smartapp-rpc = "~0.3.0"
+
+[tool.poetry.dev-dependencies]
+black = "21.12b0"
+isort = "^4.3"
+autoflake = "^1.4"
+mypy = "0.910"
+wemake-python-styleguide = "^0.15"
+bandit = "1.7.2"
+
+pytest = "^7.0.1"
+pytest-asyncio = "^0.18.1"
+pytest-cov = "^3.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
