@@ -13,7 +13,6 @@ async def smartapp_exception_handler(
     smartapp: SmartApp,
 ) -> RPCErrorResponse:
     assert smartapp.event
-    assert smartapp.event.raw_command
 
     if not get_debug_enabled():
         log_system_event(
