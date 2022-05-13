@@ -15,7 +15,7 @@ async def smartapp_exception_handler(
     assert smartapp.event
 
     if not get_debug_enabled():
-        if not smartapp.event.raw_command:
+        if smartapp.event.raw_command is None:
             logger.warning("Empty `raw_command`")
         else:
             log_system_event(
