@@ -15,15 +15,11 @@ async def smartapp_exception_handler(
     assert smartapp.event
 
     if not get_debug_enabled():
-        if smartapp.event.raw_command is None:
-            logger.warning("Empty `raw_command`")
-        else:
-            log_system_event(
-                smartapp.event.raw_command,
-                "Error while processing incoming SmartApp event:",
-                log_levels.ERROR,
-            )
-
+        log_system_event(
+            smartapp.event.raw_command,
+            "Error while processing incoming SmartApp event:",
+            log_levels.ERROR,
+        )
         flush_accumulated_logs(log_levels.ERROR)
 
     logger.exception(attach_log_source(""))
