@@ -13,14 +13,17 @@ async def smartapp_exception_handler(
     smartapp: SmartApp,
 ) -> RPCErrorResponse:
     assert smartapp.event
-    assert smartapp.event.raw_command
 
     if not get_debug_enabled():
-        log_system_event(
-            smartapp.event.raw_command,
-            "Error while processing incoming SmartApp event:",
-            log_levels.ERROR,
-        )
+        if not smartapp.event.raw_command:
+            logger.warning("Empty `raw_command`")
+        else:
+            log_system_event(
+                smartapp.event.raw_command,
+                "Error while processing incoming SmartApp event:",
+                log_levels.ERROR,
+            )
+
         flush_accumulated_logs(log_levels.ERROR)
 
     logger.exception(attach_log_source(""))
