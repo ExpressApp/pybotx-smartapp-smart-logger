@@ -7,7 +7,7 @@ authors = ["Arseniy Zhiltsov <arseniy.zhiltsov@ccsteam.ru>"]
 [tool.poetry.dependencies]
 python = ">=3.8, <3.11"
 
-pybotx = ">=0.32.0,<0.40.0"
+pybotx = ">=0.44.0,<0.45.0"
 pybotx-smart-logger = ">=0.6.9,<0.7.0"
 pybotx-smartapp-rpc = ">=0.4.1,<0.5.0"
 
