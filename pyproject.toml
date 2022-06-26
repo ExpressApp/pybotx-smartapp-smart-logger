@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pybotx-smartapp-smart-logger"
-version = "0.2.5"
+version = "0.2.6"
 description = ""
 authors = ["Arseniy Zhiltsov <arseniy.zhiltsov@ccsteam.ru>"]
 
@@ -9,7 +9,7 @@ python = ">=3.8, <3.11"
 
 pybotx = ">=0.42.0,<0.45.0"
 pybotx-smart-logger = ">=0.6.7,<0.8.0"
-pybotx-smartapp-rpc = ">=0.4.1,<0.5.0"
+pybotx-smartapp-rpc = ">=0.5.0,<0.6.0"
 
 [tool.poetry.dev-dependencies]
 black = "22.3.0"
