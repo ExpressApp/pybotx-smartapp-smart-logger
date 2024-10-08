@@ -5,7 +5,7 @@ description = ""
 authors = ["Arseniy Zhiltsov <arseniy.zhiltsov@ccsteam.ru>"]
 
 [tool.poetry.dependencies]
-python = ">=3.8, <3.11"
+python = ">=3.13, <3.14"
 
 pybotx = ">=0.42.0,<0.45.0"
 pybotx-smart-logger = ">=0.6.7,<0.8.0"
