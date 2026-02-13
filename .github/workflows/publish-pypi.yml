@@ -22,6 +22,6 @@ jobs:
 
           echo "Tag commit ${tag_commit} is reachable from ${default_branch}"
       - name: Build and publish to pypi
-        uses: JRubics/poetry-publish@v1.8
+        uses: JRubics/poetry-publish@v2.1
         with:
           pypi_token: ${{ secrets.PYPI_TOKEN }}
