@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v6
-      - name: Assert tag is from master or release-candidate
-        run: git branch -a --contains $(git describe --tags) | grep -E "master|release-candidate"
+      - name: Assert tag is from master
+        run: git branch -a --contains $(git describe --tags) | grep master
       - name: Build and publish to pypi
-        uses: JRubics/poetry-publish@v2.1
+        uses: JRubics/poetry-publish@v1.8
         with:
           pypi_token: ${{ secrets.PYPI_TOKEN }}
