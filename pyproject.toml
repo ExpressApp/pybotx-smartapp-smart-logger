@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pybotx-smartapp-smart-logger"
-version = "0.3.1"
+version = "0.3.0"
 description = ""
 authors = ["Arseniy Zhiltsov <arseniy.zhiltsov@ccsteam.ru>"]
 
