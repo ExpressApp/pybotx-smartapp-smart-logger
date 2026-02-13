@@ -1,12 +1,12 @@
-from typing import Callable
+from collections.abc import Callable
 from unittest.mock import AsyncMock
 
 import pytest
 from pybotx import SmartAppEvent
-from pybotx_smart_logger import smart_log, wrap_system_event
+from pybotx_smart_logger import smart_log
 from pybotx_smartapp_rpc import RPCResultResponse, RPCRouter, SmartApp, SmartAppRPC
 
-from pybotx_smartapp_smart_logger import smartapp_exception_handler
+from pybotx_smartapp_smart_logger import smartapp_exception_handler, wrap_system_event
 
 
 async def test_rpc_call_error_logged(

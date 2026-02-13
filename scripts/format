@@ -2,8 +2,5 @@
 
 set -e
 
-isort --recursive  --force-single-line-imports pybotx_smartapp_smart_logger tests
-autoflake --recursive --remove-all-unused-imports --remove-unused-variables --in-place pybotx_smartapp_smart_logger tests
-black pybotx_smartapp_smart_logger tests
-isort --recursive pybotx_smartapp_smart_logger tests
-git ls-files | grep ".*\.py$" | xargs add-trailing-comma --py36-plus --exit-zero-even-if-changed
+ruff check --fix pybotx_smartapp_smart_logger tests
+ruff format pybotx_smartapp_smart_logger tests

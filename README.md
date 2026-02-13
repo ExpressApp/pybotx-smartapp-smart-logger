@@ -27,7 +27,7 @@ smartapp = SmartAppRPC(
 5. Оборачиваем вызов `handle_smartapp_event` в контекстный менеджер:
 
 ```python
-from pybotx_smart_logger import wrap_system_event
+from pybotx_smartapp_smart_logger import wrap_system_event
 
 @collector.smartapp_event
 async def handle_smartapp_event(event: SmartAppEvent, bot: Bot) -> None:
@@ -48,4 +48,17 @@ async def divide(
 ) -> RPCResultResponse[int]:
     smart_log(f"RPC method `divide` called with args: {rpc_arguments}")
     return RPCResultResponse(result=rpc_arguments.a / rpc_arguments.b)
+```
+
+## Разработка
+
+```bash
+# форматирование
+poetry run ./scripts/format
+
+# статические проверки
+poetry run ./scripts/lint
+
+# тесты (параллельно через xdist)
+poetry run ./scripts/test
 ```

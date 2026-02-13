@@ -5,7 +5,5 @@ set -x
 
 
 mypy pybotx_smartapp_smart_logger tests
-flake8 pybotx_smartapp_smart_logger tests
-
-black --check pybotx_smartapp_smart_logger tests --diff
-isort --recursive --check-only pybotx_smartapp_smart_logger tests
+ruff check pybotx_smartapp_smart_logger tests
+ruff format --check pybotx_smartapp_smart_logger tests
