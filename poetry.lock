@@ -330,18 +330,21 @@ doc = ["Sphinx", "sphinx-rtd-theme", "sphinxcontrib-spelling"]
 
 [[package]]
 name = "faker"
-version = "37.8.0"
+version = "40.4.0"
 description = "Faker is a Python package that generates fake data for you."
 optional = false
-python-versions = ">=3.9"
+python-versions = ">=3.10"
 groups = ["dev"]
 files = [
-    {file = "faker-37.8.0-py3-none-any.whl", hash = "sha256:b08233118824423b5fc239f7dd51f145e7018082b4164f8da6a9994e1f1ae793"},
-    {file = "faker-37.8.0.tar.gz", hash = "sha256:090bb5abbec2b30949a95ce1ba6b20d1d0ed222883d63483a0d4be4a970d6fb8"},
+    {file = "faker-40.4.0-py3-none-any.whl", hash = "sha256:486d43c67ebbb136bc932406418744f9a0bdf2c07f77703ea78b58b77e9aa443"},
+    {file = "faker-40.4.0.tar.gz", hash = "sha256:76f8e74a3df28c3e2ec2caafa956e19e37a132fdc7ea067bc41783affcfee364"},
 ]
 
 [package.dependencies]
-tzdata = "*"
+tzdata = {version = "*", markers = "platform_system == \"Windows\""}
+
+[package.extras]
+tzdata = ["tzdata"]
 
 [[package]]
 name = "freezegun"
@@ -1026,6 +1029,7 @@ description = "Provider of IANA time zone data"
 optional = false
 python-versions = ">=2"
 groups = ["dev"]
+markers = "platform_system == \"Windows\""
 files = [
     {file = "tzdata-2025.3-py2.py3-none-any.whl", hash = "sha256:06a47e5700f3081aab02b2e513160914ff0694bce9947d6b76ebd6bf57cfc5d1"},
     {file = "tzdata-2025.3.tar.gz", hash = "sha256:de39c2ca5dc7b0344f2eba86f49d614019d29f060fc4ebc8a417896a620b56a7"},
@@ -1050,4 +1054,4 @@ dev = ["black (>=19.3b0) ; python_version >= \"3.6\"", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10,<3.14"
-content-hash = "980aaf02d43b0dc2a10fd5dcbfe735c2d1d652068dae23b93af27f99f5eb9e90"
+content-hash = "35c578dbf60e8938c24293f5e55e15441828b14c8395ba3f3b40c8773a7ae0dc"
