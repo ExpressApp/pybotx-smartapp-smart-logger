@@ -591,14 +591,14 @@ pyjwt = ">=2.11.0,<3.0.0"
 
 [[package]]
 name = "pybotx-smart-logger"
-version = "0.12.0"
+version = "0.12.1"
 description = "Shows logs when you need it"
 optional = false
 python-versions = "<3.14,>=3.10"
 groups = ["main"]
 files = [
-    {file = "pybotx_smart_logger-0.12.0-py3-none-any.whl", hash = "sha256:efdb620bcb95c9a87031be87ebc9869b1d72ce087904342e12dcf8d6da30c03d"},
-    {file = "pybotx_smart_logger-0.12.0.tar.gz", hash = "sha256:8a4352b032f47aff907c32e878059757f343ef8fb85ba3cfd1c82c3ac34828f6"},
+    {file = "pybotx_smart_logger-0.12.1-py3-none-any.whl", hash = "sha256:f19df2b391faa404f19f58e97aeb22990af0f04a404a4395581419a68fe3e1fe"},
+    {file = "pybotx_smart_logger-0.12.1.tar.gz", hash = "sha256:ea7e98a96f8a4d5d858784c10c5b7882d2f0723e6cd88705c5208d076bc6ed2e"},
 ]
 
 [package.dependencies]
